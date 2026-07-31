@@ -1,0 +1,570 @@
+/* ---------- BASE ---------- */
+:root {
+  --bg: #fffafc;
+  --text: #3a2d3c;
+  --accent: #9c27b0;
+  --lav: #e6e6fa;
+  --mint: #b2f2bb;
+  --card: #f8eafc;
+  --glass: rgba(255, 255, 255, 0.7);
+  --modal-bg: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1.6rem 1rem;
+  background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+  border-bottom: 4px dotted #c48b9f;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.boba-icon {
+  width: 48px;
+  height: 48px;
+}
+.site-title {
+  font-family: "Pacifico", "Comic Sans MS", cursive;
+  font-size: 2.1rem;
+  color: var(--accent);
+  margin: 0;
+}
+.menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.menu a {
+  color: #6a1b9a;
+  text-decoration: none;
+  font-weight: 600;
+}
+#toggle-mode {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* catchphrase & welcome */
+.catchphrase {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ab47bc;
+  margin-top: 0.8rem;
+}
+.welcome-text {
+  font-style: italic;
+  color: #5e35b1;
+  margin-top: 0.4rem;
+}
+/* dark mode */
+body.dark-mode {
+  --bg: #1f1b24;
+  --text: #f7e7f7;
+  --card: #37243f;
+  --modal-bg: #211726;
+}
+body.dark-mode header {
+  background: linear-gradient(135deg, #4a148c, #311b92);
+  border-bottom: 4px dotted #ba68c8;
+}
+body.dark-mode .novel-card {
+  background: #37243f;
+  color: #f0d6f1;
+}
+body.dark-mode .modal-panel {
+  background: #24172a;
+  color: #f8eaf6;
+}
+/* ---------- FLAVOR SECTION ---------- */
+
+.flavors-section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #9c27b0;
+  margin-bottom: 2rem;
+}
+
+/* GRID */
+.flavor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARDBOARD / CARD */
+.flavor-card {
+  background: rgba(255, 255, 255, 0.7);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 24px;
+
+  padding: 1.5rem;
+
+  box-shadow: 0 8px 24px rgba(156, 39, 176, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+/* HOVER */
+.flavor-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+.flavor-card img {
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  margin-bottom: 1rem;
+}
+
+/* TITLE */
+.flavor-card h3 {
+  color: #7b1fa2;
+  font-size: 1.4rem;
+}
+
+/* TEXT */
+.flavor-card p {
+  color: #5e35b1;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.flavor-btn {
+  margin-top: 1rem;
+
+  background: linear-gradient(135deg, #ce93d8, #f8bbd0);
+
+  border: none;
+
+  padding: 0.8rem 1.4rem;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.flavor-btn:hover {
+  opacity: 0.9;
+}
+/* ---------- LINK RESET ---------- */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+/* ---------- CHAPTER PAGE ---------- */
+
+.chapter-page {
+  background: linear-gradient(
+      rgba(255, 250, 252, 0.78),
+      rgba(245, 240, 255, 0.82)
+    ),
+    url("YOUR-BACKGROUND-IMAGE");
+
+  background-size: cover;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+}
+
+/* TOP HEADER */
+
+.chapter-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 1rem 1.5rem;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  backdrop-filter: blur(10px);
+}
+
+/* READER AREA */
+
+.reader-container {
+  display: flex;
+
+  justify-content: center;
+
+  padding: 2rem 1rem;
+}
+
+/* READING BOX */
+
+.chapter-box {
+  width: 100%;
+
+  max-width: 850px;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+
+  padding: 2rem;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* NOVEL NAME */
+
+.novel-name {
+  text-align: center;
+
+  color: #9c27b0;
+
+  font-weight: bold;
+
+  margin-bottom: 0.5rem;
+}
+
+/* CHAPTER TITLE */
+
+.chapter-title {
+  text-align: center;
+
+  color: #6a1b9a;
+
+  margin-bottom: 2rem;
+}
+
+/* CHAPTER TEXT */
+
+.chapter-content {
+  line-height: 2.1;
+
+  font-size: 1.08rem;
+
+  color: #3a2d3c;
+}
+
+/* PARAGRAPHS */
+
+.chapter-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* NAVIGATION */
+
+.chapter-nav {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin: 2rem 0;
+}
+
+/* BUTTONS */
+
+.nav-btn {
+  background: linear-gradient(135deg, #ce93d8, #f8bbd0);
+
+  padding: 0.8rem 1.4rem;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-weight: bold;
+}
+/* ---------- READER CONTROLS ---------- */
+
+.reader-controls {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+
+.reader-controls button {
+  background: linear-gradient(135deg, #d8b4f8, #f8bbd0);
+
+  border: none;
+
+  padding: 0.7rem 1rem;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.reader-controls button:hover {
+  transform: scale(1.05);
+}
+/* ---------- DARK MODE FULL SITE ---------- */
+
+body.dark-mode {
+  --bg: #1f1b24;
+  --text: #f7e7f7;
+}
+
+/* BODY */
+
+body.dark-mode {
+  background: linear-gradient(rgba(25, 20, 35, 0.88), rgba(20, 15, 30, 0.9)),
+    url("YOUR-BACKGROUND-IMAGE");
+}
+
+/* HEADER */
+
+body.dark-mode header {
+  background: rgba(35, 25, 45, 0.6);
+
+  backdrop-filter: blur(10px);
+}
+
+/* CARDS */
+
+body.dark-mode .flavor-card,
+body.dark-mode .chapter-box {
+  background: rgba(40, 30, 55, 0.55);
+
+  color: #f7e7f7;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* TEXT */
+
+body.dark-mode .chapter-content,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f7e7f7;
+}
+
+/* MENU */
+
+body.dark-mode .menu a {
+  color: #f3d8ff;
+}
+
+/* BUTTONS */
+
+body.dark-mode .nav-btn,
+body.dark-mode .flavor-btn {
+  background: linear-gradient(135deg, #7b1fa2, #ba68c8);
+}
+/* ---------- NOVEL PAGE ---------- */
+
+.novel-main {
+  padding: 3rem 1rem;
+
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+/* HERO SECTION */
+
+..novel-hero {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+/* COVER BOX */
+
+.novel-cover-box {
+  background: rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+
+  padding: 1rem;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* COVER IMAGE */
+
+.novel-cover {
+  width: 100%;
+
+  border-radius: 18px;
+
+  display: block;
+}
+
+/* INFO BOX */
+
+.novel-info-box {
+  background: rgba(230, 220, 255, 0.45);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+
+  padding: 2rem;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* STATUS */
+
+.status {
+  display: inline-block;
+
+  padding: 0.4rem 1rem;
+
+  border-radius: 999px;
+
+  font-weight: bold;
+
+  margin-bottom: 1rem;
+}
+
+.ongoing {
+  background: linear-gradient(135deg, #c8f7c5, #b2f2bb);
+
+  color: #2e7d32;
+}
+
+/* TITLE */
+
+.novel-title {
+  font-size: 1.8 rem;
+
+  color: #7b1fa2;
+
+  margin-bottom: 1.5rem;
+}
+
+/* META */
+
+.novel-meta p {
+  margin-bottom: 0.8rem;
+
+  color: #4a3a5a;
+}
+
+/* SYNOPSIS + TOC BOX */
+
+.synopsis-box,
+.toc-box {
+  background: rgba(255, 255, 255, 0.4);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* SECTION TITLES */
+
+.synopsis-box h2,
+.toc-box h2 {
+  color: #7b1fa2;
+
+  margin-bottom: 1rem;
+}
+
+/* TOC ROWS */
+
+.toc-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 1rem;
+
+  margin-bottom: 0.8rem;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(200, 230, 255, 0.5),
+    rgba(200, 255, 230, 0.5)
+  );
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.toc-row:hover {
+  transform: translateX(6px);
+
+  background: linear-gradient(
+    135deg,
+    rgba(220, 210, 255, 0.7),
+    rgba(210, 255, 240, 0.7)
+  );
+}
+. 
