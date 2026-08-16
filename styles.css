@@ -568,3 +568,879 @@ body.dark-mode .flavor-btn {
   );
 }
 . 
+/* =========================================================
+   LIBRARY PAGE
+   ========================================================= */
+
+   .library-page {
+  min-height: 100vh;
+}
+
+/* ---------- LIBRARY CONTAINER ---------- */
+
+.library-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+/* ---------- INTRO ---------- */
+
+.library-intro {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.library-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.library-intro p {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ---------- NOVEL GRID ---------- */
+
+.novel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  align-items: stretch;
+}
+
+/* ---------- NOVEL CARD ---------- */
+
+.library-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 8px 25px rgba(120, 90, 120, 0.12);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Card hover */
+
+.library-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(120, 90, 120, 0.18);
+}
+
+/* ---------- COVER ---------- */
+
+.library-cover {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.library-cover img {
+  width: 190px;
+  height: 270px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  box-shadow: 0 6px 18px rgba(80, 60, 80, 0.18);
+}
+
+/* ---------- NOVEL INFORMATION ---------- */
+
+.library-info {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.library-info h2 {
+  margin: 5px 0 8px;
+
+  font-size: 1.45rem;
+}
+
+.library-info p {
+  line-height: 1.7;
+
+  margin: 8px 0 20px;
+}
+
+/* ---------- STATUS ---------- */
+
+.novel-status {
+  font-size: 0.9rem;
+
+  margin-bottom: 5px !important;
+}
+
+/* ---------- READ BUTTON ---------- */
+
+.library-button {
+  display: inline-block;
+
+  margin-top: auto;
+
+  padding: 11px 22px;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.library-button:hover {
+  transform: scale(1.04);
+
+  opacity: 0.85;
+}
+
+/* ---------- FOOTER ---------- */
+
+.library-page footer {
+  text-align: center;
+
+  margin-top: 60px;
+  padding: 25px 15px;
+
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+       MOBILE
+       ========================================================= */
+
+@media (max-width: 700px) {
+  .library-container {
+    width: 92%;
+    margin: 35px auto;
+  }
+
+  .library-intro {
+    margin-bottom: 30px;
+  }
+
+  .library-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .novel-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .library-card {
+    padding: 20px;
+  }
+
+  .library-cover img {
+    width: 170px;
+    height: 245px;
+  }
+
+  .library-info h2 {
+    font-size: 1.3rem;
+  }
+}
+/* =========================================================
+   LIBRARY — DARK MODE
+   ========================================================= */
+
+body.dark-mode .library-card {
+  background: #241735;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .library-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Novel titles */
+
+body.dark-mode .library-info h2 {
+  color: #b8ff7a;
+}
+
+/* Ongoing status */
+
+body.dark-mode .novel-status {
+  color: #ff8fcf;
+}
+
+/* Synopsis */
+
+body.dark-mode .library-info p {
+  color: #ffc1df;
+}
+
+/* Read button */
+
+body.dark-mode .library-button {
+  color: #241735;
+  background: #b8ff7a;
+}
+
+/* Button hover */
+
+body.dark-mode .library-button:hover {
+  color: #241735;
+  background: #ff8fcf;
+}
+/* =========================================================
+   LIBRARY — LIGHT MODE ACCENTS
+   ========================================================= */
+
+.library-info h2 {
+  color: #7b4fa3;
+}
+
+.novel-status {
+  color: #d96aa7;
+}
+
+.library-button {
+  color: white;
+  background: #9a70bd;
+}
+
+.library-button:hover {
+  background: #d96aa7;
+}
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-container {
+  width: 90%;
+  max-width: 850px;
+  margin: 50px auto;
+}
+
+/* ---------- INTRO ---------- */
+
+.about-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.about-welcome {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ---------- ABOUT CARDS ---------- */
+
+.about-card {
+  padding: 28px 32px;
+  margin-bottom: 25px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 8px 25px rgba(120, 90, 120, 0.12);
+}
+
+.about-card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 1.35rem;
+}
+
+.about-card p {
+  line-height: 1.85;
+  margin: 10px 0;
+}
+
+/* ---------- LITTLE CHAOS ---------- */
+
+.about-chaos {
+  font-style: italic;
+}
+
+.about-welcome-message {
+  font-weight: 600;
+}
+
+/* ---------- SIGNATURE ---------- */
+
+.about-signature {
+  text-align: center;
+
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+  line-height: 1.8;
+}
+
+.about-ps {
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* =========================================================
+     DARK MODE
+     ========================================================= */
+
+body.dark-mode .about-card {
+  background: #241735;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .about-card h2 {
+  color: #b8ff7a;
+}
+
+body.dark-mode .about-card p {
+  color: #ffc1df;
+}
+
+body.dark-mode .about-welcome {
+  color: #ffc1df;
+}
+
+body.dark-mode .about-signature {
+  color: #ffc1df;
+}
+
+/* =========================================================
+     MOBILE
+     ========================================================= */
+
+@media (max-width: 700px) {
+  .about-container {
+    width: 92%;
+    margin: 35px auto;
+  }
+
+  .about-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-card {
+    padding: 22px 20px;
+  }
+
+  .about-card h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* =========================================================
+   ABOUT PAGE — LIGHT MODE
+   Velvet Pink Edition 🧋💗
+   ========================================================= */
+
+.about-card {
+  background: #fceaf3;
+
+  border: 1px solid rgba(112, 10, 110, 0.12);
+
+  box-shadow: 0 8px 25px rgba(112, 10, 110, 0.13);
+}
+
+/* ---------- HEADINGS ---------- */
+
+.about-card h2 {
+  color: #700a6e;
+}
+
+/* ---------- MAIN TEXT ---------- */
+
+.about-card p {
+  color: #5f4059;
+}
+
+/* ---------- WELCOME ---------- */
+
+.about-welcome {
+  color: #700a6e;
+}
+
+/* ---------- LITTLE CHAOS ---------- */
+
+.about-chaos {
+  color: #d85c91;
+}
+
+/* ---------- WELCOME MESSAGE ---------- */
+
+.about-welcome-message {
+  color: #a33d76;
+}
+
+/* ---------- SIGNATURE ---------- */
+
+.about-signature {
+  color: #700a6e;
+}
+
+.about-ps {
+  color: #d85c91;
+}
+.about-card {
+  border-left: 5px solid #fea7ca;
+}
+/* =========================================================
+   SCHEDULE PAGE
+   ========================================================= */
+
+.schedule-container {
+  width: 90%;
+  max-width: 850px;
+  margin: 50px auto;
+}
+
+/* ---------- INTRO ---------- */
+
+.schedule-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.schedule-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.schedule-intro p {
+  line-height: 1.8;
+}
+
+/* =========================================================
+       STORY SCHEDULE CARDS
+       ========================================================= */
+
+.story-schedules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+
+  margin-bottom: 45px;
+}
+
+.schedule-story-card {
+  padding: 28px 30px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 8px 25px rgba(120, 90, 120, 0.12);
+}
+
+.schedule-story-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-size: 1.35rem;
+}
+
+.schedule-story-card p {
+  line-height: 1.8;
+}
+
+/* Update frequency */
+
+.schedule-frequency {
+  font-weight: 600;
+}
+
+/* =========================================================
+       UPCOMING CHAPTERS
+       ========================================================= */
+
+.upcoming-section {
+  margin-top: 20px;
+}
+
+.upcoming-section > h2 {
+  text-align: center;
+
+  font-size: 1.7rem;
+
+  margin-bottom: 10px;
+}
+
+.schedule-note {
+  text-align: center;
+
+  margin-bottom: 25px;
+
+  line-height: 1.7;
+}
+
+/* Main schedule box */
+
+.upcoming-box {
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 8px 25px rgba(120, 90, 120, 0.12);
+
+  overflow: hidden;
+}
+
+/* Individual rows */
+
+.schedule-row {
+  display: flex;
+
+  align-items: center;
+
+  padding: 18px 25px;
+
+  border-bottom: 1px solid rgba(120, 90, 120, 0.12);
+
+  gap: 25px;
+}
+
+.schedule-row:last-child {
+  border-bottom: none;
+}
+
+/* Date */
+
+.schedule-date {
+  min-width: 110px;
+
+  font-weight: 600;
+}
+
+/* Chapter */
+
+.schedule-chapter {
+  line-height: 1.6;
+}
+
+.schedule-chapter span {
+  margin-left: 8px;
+}
+
+/* =========================================================
+       LITTLE NOTE
+       ========================================================= */
+
+.schedule-footer-note {
+  text-align: center;
+
+  margin: 35px auto;
+
+  max-width: 650px;
+
+  font-style: italic;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+       DARK MODE
+       ========================================================= */
+
+body.dark-mode .schedule-story-card,
+body.dark-mode .upcoming-box {
+  background: #241735;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Story titles */
+
+body.dark-mode .schedule-story-card h2 {
+  color: #b8ff7a;
+}
+
+/* Frequency */
+
+body.dark-mode .schedule-frequency {
+  color: #ff8fcf;
+}
+
+/* Story descriptions */
+
+body.dark-mode .schedule-story-card p {
+  color: #f71481;
+}
+
+/* Upcoming title */
+
+body.dark-mode .upcoming-section > h2 {
+  color: #b8ff7a;
+}
+
+/* Upcoming note */
+
+body.dark-mode .schedule-note,
+body.dark-mode .schedule-footer-note {
+  color: #ffc1df;
+}
+
+/* Schedule rows */
+
+body.dark-mode .schedule-row {
+  border-bottom-color: rgba(255, 143, 207, 0.15);
+}
+
+/* Dates */
+
+body.dark-mode .schedule-date {
+  color: #ff8fcf;
+}
+
+/* Chapter titles */
+
+body.dark-mode .schedule-chapter {
+  color: #ffc1df;
+}
+
+/* =========================================================
+       MOBILE
+       ========================================================= */
+
+@media (max-width: 700px) {
+  .schedule-container {
+    width: 92%;
+    margin: 35px auto;
+  }
+
+  .schedule-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .story-schedules {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .schedule-story-card {
+    padding: 23px 20px;
+  }
+
+  .schedule-row {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+
+    padding: 17px 20px;
+  }
+
+  .schedule-date {
+    min-width: auto;
+  }
+
+  .schedule-chapter span {
+    margin-left: 0;
+
+    display: block;
+  }
+}
+/* =========================================================
+       LIGHT MODE — MATURE BUBBLY ✨💗
+       ========================================================= */
+
+/* ---------- STORY CARDS ---------- */
+
+.schedule-story-card {
+  background: #fceaf3;
+
+  border: 2px solid #fea7ca;
+
+  border-radius: 24px;
+
+  box-shadow: 0 10px 28px rgba(112, 10, 110, 0.16);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* Little velvet accent */
+
+.schedule-story-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background: #700a6e;
+}
+
+/* ---------- STORY TITLES ---------- */
+
+.schedule-story-card h2 {
+  color: #700a6e;
+
+  font-weight: 700;
+}
+
+/* ---------- FREQUENCY ---------- */
+
+.schedule-frequency {
+  color: #d94f91;
+
+  font-weight: 700;
+
+  background: #fea7ca;
+
+  display: inline-block;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 12px rgba(217, 79, 145, 0.18);
+}
+
+/* ---------- STORY DESCRIPTIONS ---------- */
+
+.schedule-story-card p {
+  color: #5f4059;
+}
+
+/* ---------- MAIN SCHEDULE TITLE ---------- */
+
+.upcoming-section > h2 {
+  color: #700a6e;
+
+  font-weight: 700;
+}
+
+/* ---------- SCHEDULE NOTE ---------- */
+
+.schedule-note {
+  color: #a33d76;
+}
+
+/* ---------- LITTLE FOOTER CHAOS ---------- */
+
+.schedule-footer-note {
+  color: #d85c91;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+       SCHEDULE BOX — LEFT UNTOUCHED 💗
+       ========================================================= */
+
+/*
+   The .upcoming-box and its rows are intentionally
+   NOT styled here.
+
+   Your existing schedule box stays exactly as it is.
+*/
+
+/* =========================================================
+       EXTRA LITTLE DETAILS ✨
+       ========================================================= */
+
+.schedule-story-card:nth-child(1) {
+  transform: rotate(-0.5deg);
+}
+
+.schedule-story-card:nth-child(2) {
+  transform: rotate(0.5deg);
+}
+
+/* =========================================================
+       MOBILE
+       ========================================================= */
+
+@media (max-width: 700px) {
+  .schedule-story-card:nth-child(1),
+  .schedule-story-card:nth-child(2) {
+    transform: none;
+  }
+
+  .schedule-story-card {
+    border-radius: 21px;
+  }
+}
+/* =========================================================
+   CHAPTER FOOTER
+   ========================================================= */
+
+.chapter-footer {
+  text-align: center;
+
+  margin-top: 45px;
+  padding: 25px 15px 15px;
+
+  border-top: 1px solid rgba(112, 10, 110, 0.15);
+}
+
+.footer-brand {
+  color: #700a6e;
+
+  font-weight: 700;
+
+  font-size: 1.05rem;
+
+  margin-bottom: 6px;
+}
+
+.footer-message {
+  color: #d85c91;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 6px;
+}
+
+.footer-copyright {
+  color: #8c6b83;
+
+  font-size: 0.78rem;
+}
+
+/* ---------- DARK MODE ---------- */
+
+body.dark-mode .chapter-footer {
+  border-top-color: rgba(255, 143, 207, 0.15);
+}
+
+body.dark-mode .footer-brand {
+  color: #b8ff7a;
+}
+
+body.dark-mode .footer-message {
+  color: #ffc1df;
+}
+
+body.dark-mode .footer-copyright {
+  color: #b99aaa;
+}
